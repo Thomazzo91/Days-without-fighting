@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dagar utan incident</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #f4f4f4;
+            background-image: url('images/background.jpg'); /* Uppdatera med din bilds sökväg */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        #title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #daysCounter {
+            font-size: 3em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="title">Dagar utan incident</div>
+    <div id="daysCounter"></div>
+
+    <script>
+        const startDate = new Date('2023-01-01'); // Ändra till ditt startdatum
+        const today = new Date();
+        const timeDifference = today - startDate;
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        document.getElementById('daysCounter').innerText = daysDifference + " dagar";
+    </script>
+
+</body>
+</html>
